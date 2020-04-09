@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="stylesheet" href="index.css">
   <title>Water-Level</title>
 </head>
@@ -24,10 +24,22 @@
         <input type="text" name="data-and-time-to" required>
       </li>
       <li class="listitem">
-        <button type="submit">Submit</button>
+        <label for="dType">Data Format</label>
+      </li>
+      <li class="listitem">
+        <select id="dType" name="dType" required>
+          <option value="1">JSON</option>
+          <option value="2">XML</option>
+          <option value="3">CSV</option>
+        </select>
+      </li>
+      <li class="listitem">
+        <button id="sub" type="submit">Get Download</button>
       </li>
     </ul>
+    <p id='showData' class="c"></p>
     </form>
+    <script src="prettyPrint.js"></script>
     <script src="index.js"></script>
 </body>
 </html>
