@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Water-Level</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Water-Level</title>
 </head>
 <body>
+  <h1 class="c">Water-Level</h1>
+  <p class="c">This site allows you to input a date and time range and get water level data for Lake Michigan from NOAA</p>
+  <form action="/in" id="form" method="post">
+    <ul class="list">
+      <li class="listitem">
+        <label for="data-and-time-from">Date and Time From (YYYYMMDD HH:MM)</label>
+      </li>
+      <li class="listitem">
+        <input type="text" name="data-and-time-from" required>
+      </li>
+      <li class="listitem">
+        <label for="data-and-time-to">Date and Time To (YYYYMMDD HR:MN)</label>
+      </li>
+      <li class="listitem">
+        <input type="text" name="data-and-time-to" required>
+      </li>
+      <li class="listitem">
+        <button type="submit">Submit</button>
+      </li>
+    </ul>
+    </form>
     <script src="index.js"></script>
 </body>
 </html>
