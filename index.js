@@ -5,20 +5,7 @@ let to;
 let from;
 let inputFieldFrom = document.querySelector('input[name="data-and-time-from"]');
 let inputFieldTo = document.querySelector('input[name="data-and-time-to"]');
-let dType = document.querySelector('input[name="dType"]');
 let request = new XMLHttpRequest();
-function download(filename, text) {
-    var element = document.createElement('a');
-    element.setAttribute('href', 'data:text/csv;charset=utf-8,' + encodeURIComponent(text));
-    element.setAttribute('download', filename);
-
-    element.style.display = 'none';
-    document.body.appendChild(element);
-
-    element.click();
-
-    document.body.removeChild(element);
-}
 form.addEventListener('submit', event => {
     event.preventDefault()
     to = inputFieldTo.value;
@@ -32,12 +19,7 @@ form.addEventListener('submit', event => {
         document.getElementById("sub").addEventListener("click", function () {
             window.open(new_url, '_blank');
         }, false);
-
     }
-
     request.send();
-
-
-
 })
 
