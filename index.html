@@ -8,11 +8,15 @@
 </head>
 <body>
   <h1 class="c">Water-Level</h1>
-  <p class="c">This site allows you to input a date and time range and get water level data <br> 
-    for Lake Michigan from NOAA. You can only download <br> 
-    a months worth of data at a time. Once you click "Get Download" a new tab will open and <br> 
-    a .csv file will be downloaded. you can use this file in Google Sheets and Excel.</p>
-  <form action="/in" id="form" method="post">
+  <p class="c">This site allows you to input a date and time range and get water level data for Lake Michigan from NOAA.<br>
+    You can only download a months worth of data at a time. All of the water level data is based on<br>
+    the International Great Lakes Datum (IGLD), more information on the IGLD can be found <a href="https://www.ngs.noaa.gov/TOOLS/IGLD85/igld85.shtml" target="_blank">here.</a><br>
+    All time values are GMT, and all depth measurements are in meters.<br>
+    More technical information on the API used can be found <a href="https://tidesandcurrents.noaa.gov/api/" target="_blank">here</a>.<br>
+    Once you click "Get Download" a new tab will open a .csv file will be downloaded.<br>
+    You can use the .csv file in Google Sheets and Excel.
+  </p>
+  <form id="form">
     <ul class="list">
       <li class="listitem">
         <label for="data-and-time-from">Date and Time From (YYYYMMDD HH:MM)</label>
@@ -21,7 +25,7 @@
         <input type="text" name="data-and-time-from" required>
       </li>
       <li class="listitem">
-        <label for="data-and-time-to">Date and Time To (YYYYMMDD HR:MN)</label>
+        <label for="data-and-time-to">Date and Time To (YYYYMMDD HH:MM)</label>
       </li>
       <li class="listitem">
         <input type="text" name="data-and-time-to" required>
