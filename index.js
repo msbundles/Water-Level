@@ -15,4 +15,5 @@ form.addEventListener('submit', event => {
         window.open(new_url, '_blank');
     }
     request.send();
-})
+});
+
